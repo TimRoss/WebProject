@@ -40,6 +40,6 @@
 </div>
 <div id="otherBox">
     <span>Style: {{$student->teamStyle}}</span>
-    <button href="pages/editInfo/{id}">Edit Profile</button>
+    <a href="{{$user->id}}/edit"><button >Edit Profile</button></a>
 </div>
 @stop
