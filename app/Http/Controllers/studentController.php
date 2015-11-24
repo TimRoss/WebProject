@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\student;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use Illuminate\Http\Request;
 class studentController extends Controller
 {
     /**
@@ -62,7 +62,8 @@ class studentController extends Controller
     public function edit($id)
     {
         $student = \App\student::find($id);
-        return view('pages/editInfo', compact('student'));
+        $user = \App\User::find($id);
+        return view('pages/editInfo', compact('student', 'user'));
     }
 
     /**
@@ -72,13 +73,18 @@ class studentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update($id, Request $request)
     {
 
+        $this->validate( $request, ['c' => 'required',
+            'java' => 'required',
+            'python' => 'required',
+            'teamStyle' => 'required']);
         $students = \App\student::findOrFail($id);
-        dd('2');
         $students->update($request->all());
-        dd('3');
+
+        //student::create($input);
+
         return redirect('pages/studentInfo');
     }
 

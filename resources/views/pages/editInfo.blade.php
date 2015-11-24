@@ -20,7 +20,7 @@
 
 
 
-                        <form class="form-horizontal" role="form" method="POST" action="{{ url('/pages/editInfo/{id}') }}">
+                        <!--<form class="form-horizontal" role="form" method="POST" action="{{ url('/pages/editInfo/{id}') }}">
 
 
 
@@ -69,7 +69,36 @@
                                     </button>
                                 </div>
                             </div>
-                        </form>
+                        </form>-->
+                            {!! Form::model($student, ['method' => 'PATCH', 'action' => ['studentController@update', $user->id] ]) !!}}
+                                <div class="form-group">
+                                    {!! Form::label('c', 'C++:') !!}
+                                    {!! Form::text('c', null, ['class' => 'form-control']) !!}
+                                </div>
+                            <div class="form-group">
+                                {!! Form::label('java', 'Java:') !!}
+                                {!! Form::text('java', null, ['class' => 'form-control']) !!}
+                            </div>
+                            <div class="form-group">
+                                {!! Form::label('python', 'Python:') !!}
+                                {!! Form::text('python', null, ['class' => 'form-control']) !!}
+                            </div>
+                            <div class="form-group">
+                                {!! Form::label('teamStyle', 'Team Style:') !!}
+                                {!! Form::text('teamStyle', null, ['class' => 'form-control']) !!}
+                            </div>
+                            <div class="form-group">
+                                {!! Form::label('requestedTeamMember1', 'Requested Team Member 1:') !!}
+                                {!! Form::text('requestedTeamMember1', null, ['class' => 'form-control']) !!}
+                            </div>
+                            <div class="form-group">
+                                {!! Form::label('requestedTeamMember2', 'Requested Team Member 2:') !!}
+                                {!! Form::text('requestedTeamMember2', null, ['class' => 'form-control']) !!}
+                            </div>
+                            <div class="form-group">
+                                {!! Form::submit('Apply', ['class' => 'btn btn-primary form-control']) !!}
+                            </div>
+                            {!! Form::close() !!}
                     </div>
                 </div>
             </div>

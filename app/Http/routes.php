@@ -23,5 +23,8 @@ Route::controllers([
 Route::group(array('before' => 'auth'), function(){
    Route::get('pages/studentInfo/{id}', 'studentController@show');
     Route::get('pages/editInfo/{id}', 'studentController@edit');
-    Route::post('pages/{id}', 'studentController@update');
+    Route::post('pages', 'studentController@update');
+
 });
+
+Route::resource('student', 'studentController');
