@@ -2,7 +2,7 @@
 
 @section('content')
 <ul>
-    <li>Student Name</li>
+    <li>{{$user->name}}</li>
     <li>Current Team</li>
     <li><img href=""></li>
 </ul>
@@ -18,25 +18,28 @@
     <table>
         <tr>
             <td>C++</td>
-            <td>C++ strength</td>
+            <td>{{$student->c}}</td>
         </tr>
         <tr>
             <td>Java</td>
-            <td>Java strength</td>
+            <td>{{$student->java}}</td>
         </tr>
         <tr>
             <td>Python</td>
-            <td>Python Strength</td>
+            <td>{{$student->python}}</td>
         </tr>
     </table>
 </div>
 <div id="membersBox">
     <h2>Requested Team Members</h2>
     <br>
-    <ul id="membersList"></ul>
+    <ul id="membersList">
+        <li>{{$student->requestedTeamMember1}}</li>
+        <li>{{$student->requestedTeamMember2}}</li>
+    </ul>
 </div>
 <div id="otherBox">
-    <span>Style: </span>
+    <span>Style: {{$student->teamStyle}}</span>
     <button href="pages/editInfo/{id}">Edit Profile</button>
 </div>
 @stop

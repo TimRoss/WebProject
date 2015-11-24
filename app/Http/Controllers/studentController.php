@@ -49,7 +49,8 @@ class studentController extends Controller
     public function show($id)
     {
         $student = \App\student::find($id);
-        return view('pages/studentInfo', compact('student'));
+        $user = \App\User::find($id);
+        return view('pages/studentInfo', compact('student', 'user'));
     }
 
     /**

@@ -20,28 +20,9 @@
 
 
 
-                        <form class="form-horizontal" role="form" method="POST" action="{{ url::route('pages/editInfo', Auth::id()) }}">
-                            {!! csrf_field() !!}
+                        <form class="form-horizontal" role="form" method="POST" action="{{ url('/pages/editInfo/{id}') }}">
 
-                            <!--<div class="form-group">
-                                <label class="col-md-4 control-label">Name</label>
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control" name="name" value="{{ old('name') }}">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-4 control-label">Name</label>
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control" name="name" value="{{$student->name}}">
-                                </div>
-                            </div>
 
-                            <div class="form-group">
-                                <label class="col-md-4 control-label">E-Mail Address</label>
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control" name="email" value="{{ old('email') }}">
-                                </div>
-                            </div>-->
 
                             <div class="form-group">
                                 <label class="col-md-4 control-label">C++</label>
