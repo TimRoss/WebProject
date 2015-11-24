@@ -85,7 +85,7 @@ class studentController extends Controller
 
         //student::create($input);
 
-        return redirect('pages/studentInfo');
+        return studentController::show($id);
     }
 
     /**
