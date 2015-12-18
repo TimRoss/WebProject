@@ -70,7 +70,7 @@
                                 </div>
                             </div>
                         </form>-->
-                            {!! Form::model($student, ['method' => 'PATCH', 'action' => ['studentController@update', $user->id] ]) !!}}
+                            {!! Form::model($student, ['method' => 'PATCH', 'action' => ['studentController@update', $user->id] ]) !!}
                                 <div class="form-group">
                                     {!! Form::label('c', 'C++:') !!}
                                     {!! Form::text('c', null, ['class' => 'form-control']) !!}
@@ -85,15 +85,19 @@
                             </div>
                             <div class="form-group">
                                 {!! Form::label('teamStyle', 'Team Style:') !!}
-                                {!! Form::text('teamStyle', null, ['class' => 'form-control']) !!}
+                                {!! Form::select('teamStyle', array('competitive' => 'Competitive', 'social' => 'Social', 'dk' => "Don't Care"), ['class' => 'form-control']) !!}
                             </div>
                             <div class="form-group">
-                                {!! Form::label('requestedTeamMember1', 'Requested Team Member 1:') !!}
-                                {!! Form::text('requestedTeamMember1', null, ['class' => 'form-control']) !!}
+                                {!! Form::label('twoHundreds', 'Number of 200 level classes taken:') !!}
+                                {!! Form::text('twoHundreds', null, ['class' => 'form-control']) !!}
                             </div>
                             <div class="form-group">
-                                {!! Form::label('requestedTeamMember2', 'Requested Team Member 2:') !!}
-                                {!! Form::text('requestedTeamMember2', null, ['class' => 'form-control']) !!}
+                                {!! Form::label('threeHundreds', 'Number of 300 level classes taken:') !!}
+                                {!! Form::text('threeHundreds', null, ['class' => 'form-control']) !!}
+                            </div>
+                            <div class="form-group">
+                                {!! Form::label('fourHundreds', 'Number of 400 level classes taken:') !!}
+                                {!! Form::text('fourHundreds', null, ['class' => 'form-control']) !!}
                             </div>
                             <div class="form-group">
                                 {!! Form::submit('Apply', ['class' => 'btn btn-primary form-control']) !!}

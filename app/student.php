@@ -11,7 +11,8 @@ class student extends Model
         'java',
         'python',
         'teamStyle',
-        'requestedTeamMember1',
-        'requestedTeamMember2'
+        'twoHundreds',
+        'threeHundreds',
+        'fourHundreds',
     ];
 }

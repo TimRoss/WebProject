@@ -10,6 +10,8 @@
 				<div class="panel-body">
 					You are logged in!
 				</div>
+				<a href="pages/studentInfo/{{auth()->user()->id}}" class="btn btn-info" role="button">Student Info</a>
+				<a href="admin/teamInfo" class="btn btn-info" role="button">Team Info</a>
 			</div>
 		</div>
 	</div>

@@ -34,7 +34,7 @@ class UserTableSeeder extends Seeder {
         $reader = Reader::createFromPath(base_path().'/database/seeds/students.csv');
         foreach($reader as $index => $row){
             if($skip) {
-                User::create(['name' => $row[0], 'password' => Hash::make($row[2]), 'email' => $row[3]]);
+                User::create(['name' => $row[0], 'password' => Hash::make($row[2]), 'email' => $row[3], 'admin' => $row[4]]);
             }
             else{
                 $skip = 1;
@@ -52,7 +52,7 @@ class StudentTableSeeder extends Seeder{
         $reader = Reader::createFromPath(base_path().'/database/seeds/students.csv');
         foreach($reader as $index => $row){
             if($skip) {
-                student::create(['teamStyle' => $row[4], 'c' => $row[5], 'java' => $row[6], 'python'=> $row[7]]);
+                student::create(['teamStyle' => $row[5], 'c' => $row[6], 'java' => $row[7], 'python'=> $row[8], 'twoHundreds'=> $row[9], 'threeHundreds'=> $row[10], 'fourHundreds'=> $row[11]]);
             }
             else{
                 $skip = 1;

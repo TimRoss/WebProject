@@ -23,7 +23,7 @@ class AuthController extends Controller
 
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
 
-    protected $redirectTo = '/pages/studentInfo/{id}';
+    protected $redirectTo = '/home';
 
     /**
      * Create a new authentication controller instance.
@@ -63,6 +63,7 @@ class AuthController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+            'admin' => false,
         ]);
     }
 }

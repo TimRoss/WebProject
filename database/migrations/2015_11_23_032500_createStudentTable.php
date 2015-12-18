@@ -19,8 +19,9 @@ class CreateStudentTable extends Migration
             $table->integer('java')->nullable();
             $table->integer('python')->nullable();
             $table->string('teamStyle')->nullable();
-            $table->integer('requestedTeamMember1')->nullable();
-            $table->integer('requestedTeamMember2')->nullable();
+            $table->integer('twoHundreds')->nullable();
+            $table->integer('threeHundreds')->nullable();
+            $table->integer('fourHundreds')->nullable();
             $table->timestamps();
         });
     }
